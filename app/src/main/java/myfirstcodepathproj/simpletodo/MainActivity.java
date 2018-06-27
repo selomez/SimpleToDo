@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(resultCode == RESULT_OK && resultCode == EDIT_REQUEST_CODE ){
+        if(resultCode == RESULT_OK && requestCode == EDIT_REQUEST_CODE ){
             String updatedItem = data.getExtras().getString(ITEM_TEXT);
             int position = data.getExtras().getInt(ITEM_POSITION);
             items.set(position, updatedItem);
